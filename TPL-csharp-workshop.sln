@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.33927.289
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TPL-csharp-workshop", "TPL-csharp-workshop.csproj", "{CF0A5674-E9C2-45AC-9DC8-CF81CB31D656}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CF0A5674-E9C2-45AC-9DC8-CF81CB31D656}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF0A5674-E9C2-45AC-9DC8-CF81CB31D656}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF0A5674-E9C2-45AC-9DC8-CF81CB31D656}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF0A5674-E9C2-45AC-9DC8-CF81CB31D656}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3957E7A0-B713-4922-93CD-011FD27B9FED}
+	EndGlobalSection
+EndGlobal
