@@ -29,6 +29,9 @@ Observe the provided code in the [`Program.cs`](https://github.com/sikatikenmogn
 
 Understand the philosophy of the provided code. What is it trying to achieve and how does it use the concepts of parallel programming to do so?
 
+#### Answer:
+The code is trying to achieve a demonstration of how these various parallel programming concepts can be used in C#. It uses delegates, events, and parallel programming constructs to show how multiple tasks can be executed concurrently to improve performance comparing to a normal approach.
+
 ### Q3 — Code Translation
 
 Translate the provided code line by line. Understand what each line of code does and how it contributes to the overall functionality of the program.
