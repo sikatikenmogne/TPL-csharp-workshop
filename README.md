@@ -23,7 +23,7 @@ This workshop is expected to take approximately 4 hours.
 
 ### Q1 — Code Observation
 
-Observe the provided code in the [`Program.cs`]() file. This code demonstrates the use of delegates, events, and parallel programming constructs.
+Observe the provided code in the [`Program.cs`](https://github.com/sikatikenmogne/TPL-csharp-workshop/commit/ba841952320025a2d565df6f4146fbba2fb42fdd?diff=unified&w=0#diff-0b69b473fe937040615d69f606751f61ddbc2e3a1849360ff2456c22afe88c0b) file. This code demonstrates the use of delegates, events, and parallel programming constructs.
 
 ### Q2 — Code Philosophy
 
