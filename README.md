@@ -25,6 +25,8 @@ This workshop is expected to take approximately 4 hours.
 
 Observe the provided code in the [`Program.cs`](https://github.com/sikatikenmogne/TPL-csharp-workshop/commit/ba841952320025a2d565df6f4146fbba2fb42fdd?diff=unified&w=0#diff-0b69b473fe937040615d69f606751f61ddbc2e3a1849360ff2456c22afe88c0b) file. This code demonstrates the use of delegates, events, and parallel programming constructs.
 
+---
+
 ### Q2 — Code Philosophy
 
 Understand the philosophy of the provided code. What is it trying to achieve and how does it use the concepts of parallel programming to do so?
@@ -32,24 +34,36 @@ Understand the philosophy of the provided code. What is it trying to achieve and
 #### Answer:
 - **[✍️ related commit](https://github.com/sikatikenmogne/TPL-csharp-workshop/tree/2-code-philosophy?tab=readme-ov-file#answer)**
 
+---
+
 ### Q3 — Code Translation
 
 Translate the provided code line by line. Understand what each line of code does and how it contributes to the overall functionality of the program.
 
+---
+
 #### Answer:
 - **[✍️ related commit](https://github.com/sikatikenmogne/TPL-csharp-workshop/commit/745385944a1d6d6db7a35e16835cb0e7833d73d1?diff=unified&w=1)**
+
+---
 
 ### Q4 — Parallel.For
 
 Write a simple program that demonstrates the use of `Parallel.For`. This construct is used to execute a `for` loop in parallel, which can significantly improve performance for CPU-bound tasks.
 
+---
+
 ### Q5 — Parallel.ForEach
 
 Write a simple program that demonstrates the use of `Parallel.ForEach`. This construct is used to execute a `foreach` loop in parallel, which can significantly improve performance when processing collections of data.
 
+---
+
 ### Q6 — Parallel.Invoke
 
 Write a simple program that demonstrates the use of `Parallel.Invoke`. This construct is used to execute multiple methods in parallel.
+
+---
 
 ### Q7 — Task.Factory
 
