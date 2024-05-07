@@ -29,6 +29,9 @@ Observe the provided code in the [`Program.cs`](https://github.com/sikatikenmogn
 
 Understand the philosophy of the provided code. What is it trying to achieve and how does it use the concepts of parallel programming to do so?
 
+#### Answer:
+- **[✍️ related commit](https://github.com/sikatikenmogne/TPL-csharp-workshop/tree/2-code-philosophy?tab=readme-ov-file#answer)**
+
 ### Q3 — Code Translation
 
 Translate the provided code line by line. Understand what each line of code does and how it contributes to the overall functionality of the program.
