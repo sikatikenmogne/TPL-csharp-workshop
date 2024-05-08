@@ -23,7 +23,7 @@ This workshop is expected to take approximately 4 hours.
 
 ### Q1 — Code Observation
 
-Observe the provided code in the [`Program.cs`](https://github.com/sikatikenmogne/TPL-csharp-workshop/commit/ba841952320025a2d565df6f4146fbba2fb42fdd?diff=unified&w=0#diff-0b69b473fe937040615d69f606751f61ddbc2e3a1849360ff2456c22afe88c0b) file. This code demonstrates the use of delegates, events, and parallel programming constructs.
+Observe the provided code in the [`Program.cs`](https://github.com/sikatikenmogne/TPL-csharp-workshop/blob/main/Program.cs) file. This code demonstrates the use of delegates, events, and parallel programming constructs.
 
 ---
 
@@ -32,7 +32,7 @@ Observe the provided code in the [`Program.cs`](https://github.com/sikatikenmogn
 Understand the philosophy of the provided code. What is it trying to achieve and how does it use the concepts of parallel programming to do so?
 
 #### Answer:
-- **[✍️ related commit](https://github.com/sikatikenmogne/TPL-csharp-workshop/tree/2-code-philosophy?tab=readme-ov-file#answer)**
+- **[✍️ related commit](https://github.com/sikatikenmogne/TPL-csharp-workshop/blob/2-code-philosophy/README.md#q2--code-philosophy)**
 
 ---
 
@@ -93,3 +93,16 @@ along with the ID of the thread it's running on
 ### Q7 — Task.Factory
 
 Write a simple program that demonstrates the use of `Task.Factory`. This construct is used to start and manage tasks.
+
+#### Answer:
+- **[✍️ related commit](https://github.com/sikatikenmogne/TPL-csharp-workshop/blob/7-parallel-factory/Program.cs)**
+
+```text
+This code is a simple C# program that demonstrates the use of Task.Factory.StartNew.
+This method is used to create and start a new Task in one operation.
+
+in this code, an array of Task objects is created. Then, a for loop is used to create
+and start a new Task for each element in the array. Each Task prints a message to the 
+console indicating that it has started, sleeps for a period of time proportional 
+to its index in the array (simulating work), and then prints a message indicating that it has completed. 
+```
