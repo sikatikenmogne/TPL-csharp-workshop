@@ -32,7 +32,7 @@ Observe the provided code in the [`Program.cs`](https://github.com/sikatikenmogn
 Understand the philosophy of the provided code. What is it trying to achieve and how does it use the concepts of parallel programming to do so?
 
 #### Answer:
-- **[✍️ related commit](https://github.com/sikatikenmogne/TPL-csharp-workshop/blob/2-code-philosophy/README.md#q2--code-philosophy)**
+- **[✍️ related "essay"](https://github.com/sikatikenmogne/TPL-csharp-workshop/blob/2-code-philosophy/README.md#q2--code-philosophy)**
 
 ---
 
@@ -41,7 +41,7 @@ Understand the philosophy of the provided code. What is it trying to achieve and
 Translate the provided code line by line. Understand what each line of code does and how it contributes to the overall functionality of the program.
 
 #### Answer:
-- **[✍️ related commit](https://github.com/sikatikenmogne/TPL-csharp-workshop/commit/745385944a1d6d6db7a35e16835cb0e7833d73d1?diff=unified&w=1)**
+- **[✍️ related code](https://github.com/sikatikenmogne/TPL-csharp-workshop/commit/745385944a1d6d6db7a35e16835cb0e7833d73d1?diff=unified&w=1)**
 
 ---
 
@@ -50,7 +50,7 @@ Translate the provided code line by line. Understand what each line of code does
 Write a simple program that demonstrates the use of `Parallel.For`. This construct is used to execute a `for` loop in parallel, which can significantly improve performance for CPU-bound tasks.
 
 #### Answer:
-- **[✍️ related commit](https://github.com/sikatikenmogne/TPL-csharp-workshop/blob/4-parallel-for/Program.cs)**
+- **[✍️ related code](https://github.com/sikatikenmogne/TPL-csharp-workshop/blob/4-parallel-for/Program.cs)**
 
 ```text
 In this code, Parallel.For is used to execute a for loop in parallel. The loop runs from 0 to 9,
@@ -65,7 +65,7 @@ of the output may vary because the iterations are running in parallel.
 Write a simple program that demonstrates the use of `Parallel.ForEach`. This construct is used to execute a `foreach` loop in parallel, which can significantly improve performance when processing collections of data.
 
 #### Answer:
-- **[✍️ related commit](https://github.com/sikatikenmogne/TPL-csharp-workshop/blob/5-parallel-foreach/Program.cs)**
+- **[✍️ related code](https://github.com/sikatikenmogne/TPL-csharp-workshop/blob/5-parallel-foreach/Program.cs)**
 
 ```text
 The code you provided is a good example of using Parallel.ForEach to improve performance when
@@ -80,7 +80,7 @@ regular foreach loop and Parallel.ForEach, and compares the time taken for each 
 Write a simple program that demonstrates the use of `Parallel.Invoke`. This construct is used to execute multiple methods in parallel.
 
 #### Answer:
-- **[✍️ related commit](https://github.com/sikatikenmogne/TPL-csharp-workshop/blob/6-parallel-invoke/Program.cs)**
+- **[✍️ related code](https://github.com/sikatikenmogne/TPL-csharp-workshop/blob/6-parallel-invoke/Program.cs)**
 
 ```text
 In this code, Parallel.Invoke is used to execute three methods in parallel: BasicAction, 
@@ -95,7 +95,7 @@ along with the ID of the thread it's running on
 Write a simple program that demonstrates the use of `Task.Factory`. This construct is used to start and manage tasks.
 
 #### Answer:
-- **[✍️ related commit](https://github.com/sikatikenmogne/TPL-csharp-workshop/blob/7-parallel-factory/Program.cs)**
+- **[✍️ related code](https://github.com/sikatikenmogne/TPL-csharp-workshop/blob/7-parallel-factory/Program.cs)**
 
 ```text
 This code is a simple C# program that demonstrates the use of Task.Factory.StartNew.
