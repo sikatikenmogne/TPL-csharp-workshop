@@ -50,7 +50,7 @@ Translate the provided code line by line. Understand what each line of code does
 Write a simple program that demonstrates the use of `Parallel.For`. This construct is used to execute a `for` loop in parallel, which can significantly improve performance for CPU-bound tasks.
 
 #### Answer:
-- **[✍️ related commit](https://github.com/sikatikenmogne/TPL-csharp-workshop/commit/fbaf0b4efe1f2f170e37a0b46c6d26ed8560a2f4?diff=split&w=1)**
+- **[✍️ related commit](https://github.com/sikatikenmogne/TPL-csharp-workshop/blob/4-parallel-for/Program.cs)**
 
 ```text
 In this code, Parallel.For is used to execute a for loop in parallel. The loop runs from 0 to 9,
@@ -65,7 +65,7 @@ of the output may vary because the iterations are running in parallel.
 Write a simple program that demonstrates the use of `Parallel.ForEach`. This construct is used to execute a `foreach` loop in parallel, which can significantly improve performance when processing collections of data.
 
 #### Answer:
-- **[✍️ related commit](https://github.com/sikatikenmogne/TPL-csharp-workshop/commit/14e4ef436304fcff6318116eeb13bb873453e878#diff-0b69b473fe937040615d69f606751f61ddbc2e3a1849360ff2456c22afe88c0b)**
+- **[✍️ related commit](https://github.com/sikatikenmogne/TPL-csharp-workshop/blob/5-parallel-foreach/Program.cs)**
 
 ```text
 The code you provided is a good example of using Parallel.ForEach to improve performance when
