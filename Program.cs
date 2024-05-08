@@ -1,81 +1,84 @@
 ﻿﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+ using System.Collections.Concurrent;
+ using System.Collections.Generic;
+ using System.Diagnostics;
+ using System.Linq;
+ using System.Threading.Tasks;
 
-namespace test
+
+ namespace test
 {
     class Program
     {
-        delegate void DELG();
-        delegate void EVT(object o);
-        static event EVT evt;
-        static int loop;
-        static object LOCK;
+
         static void Main(string[] args)
         {
-            DELG dlG_time = new DELG(time);
-            DELG dlg_multiCast;
-            IAsyncResult asyncR;
-            LOCK = new object();
-            loop = 0;
-            evt += new EVT(state_display);
-            var an_type = new {msg_pext = "pextension",msg_noext="noextension"};
-            System.Threading.Thread thd_timeInvok = 
-                new System.Threading.Thread(new System.Threading.ThreadStart(dlG_time.Invoke));
-            System.Threading.Thread thd_paraExt =
-                new System.Threading.Thread(
-                    new System.Threading.ThreadStart(() =>
-                    {
-                        System.Threading.Tasks.Parallel.For(0, 10, i =>
-                        {
-                            Console.WriteLine(@"{0}",an_type.msg_pext);
-                            System.Threading.Thread.Sleep(1000);
-                        });
-                        evt((object)an_type.msg_pext);
-                    }));
-            System.Threading.Thread thd_noParaExt = 
-                new System.Threading.Thread(
-                    new System.Threading.ThreadStart(()=>
-                    {
-                        for (int i = 0; i < 10; i++)
-                        {
-                            Console.WriteLine(@"{0}",an_type.msg_noext);
-                            System.Threading.Thread.Sleep(1000);
-                        };
-                        evt((object)an_type.msg_noext);
-                    }));
-            asyncR = dlG_time.BeginInvoke((async) =>
-                {
-                    DELG d = (DELG)((System.Runtime.Remoting.Messaging.AsyncResult)async).AsyncDelegate;
-                    d.EndInvoke(async);
-                    Console.Write("Fin des traveaux");
-                }, dlG_time);
-            dlg_multiCast = thd_paraExt.Start;
-            dlg_multiCast += thd_noParaExt.Start;
-            dlg_multiCast.Invoke();
-            while (!asyncR.IsCompleted) { Console.WriteLine("Travaux en cours..."); System.Threading.Thread.Sleep(5000); }
-            Console.Read();
+            // 2 million
+            var limit = 2_000_000;
+            var numbers = Enumerable.Range(0, limit).ToList();
+
+            var watch = Stopwatch.StartNew();
+            var primeNumbersFromForeach = GetPrimeList(numbers);
+            watch.Stop();
+
+            var watchForParallel = Stopwatch.StartNew();
+            var primeNumbersFromParallelForeach = GetPrimeListWithParallel(numbers);
+            watchForParallel.Stop();
+
+            Console.WriteLine($"Classical foreach loop | Total prime numbers : {primeNumbersFromForeach.Count} | Time Taken : {watch.ElapsedMilliseconds} ms.");
+            Console.WriteLine($"Parallel.ForEach loop  | Total prime numbers : {primeNumbersFromParallelForeach.Count} | Time Taken : {watchForParallel.ElapsedMilliseconds} ms.");
+
+            Console.WriteLine("Press any key to exit.");
+            Console.ReadLine();
         }
-        static void time()
+
+        /// <summary>
+        /// GetPrimeList returns Prime numbers by using sequential ForEach
+        /// </summary>
+        /// <param name="inputs"></param>
+        /// <returns></returns>
+        private static IList<int> GetPrimeList(IList<int> numbers) => numbers.Where(IsPrime).ToList();
+
+        /// <summary>
+        /// GetPrimeListWithParallel returns Prime numbers by using Parallel.ForEach
+        /// </summary>
+        /// <param name="numbers"></param>
+        /// <returns></returns>
+        private static IList<int> GetPrimeListWithParallel(IList<int> numbers)
         {
-            long t = 0;
-            lock (LOCK)
+            var primeNumbers = new ConcurrentBag<int>();
+
+            Parallel.ForEach(numbers, number =>
             {
-                while (loop < 2)
+                if (IsPrime(number))
                 {
-                    Console.WriteLine(t.ToString());
-                    t += 1;
-                    System.Threading.Thread.Sleep(1000);
+                    primeNumbers.Add(number);
                 }
-            }  
+            });
+
+            return primeNumbers.ToList();
         }
-        static void state_display(object o)
+
+        /// <summary>
+        /// IsPrime returns true if number is Prime, else false.(https://en.wikipedia.org/wiki/Prime_number)
+        /// </summary>
+        /// <param name="number"></param>
+        /// <returns></returns>
+        private static bool IsPrime(int number)
         {
-            Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine("{0} STOP", (string)o);
-            Console.ForegroundColor = ConsoleColor.Gray;
-            System.Threading.Interlocked.Increment(ref loop);
+            if (number < 2)
+            {
+                return false;
+            }
+
+            for (var divisor = 2; divisor <= Math.Sqrt(number); divisor++)
+            {
+                if (number % divisor == 0)
+                {
+                    return false;
+                }
+            }
+            return true;
         }
     }
 }

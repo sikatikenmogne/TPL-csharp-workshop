@@ -10,7 +10,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5bceb090-efd2-4aae-b0ec-2f56a518ec4a" name="Changes" comment="" />
+    <list default="true" id="5bceb090-efd2-4aae-b0ec-2f56a518ec4a" name="Changes" comment="Update README.md&#10;Set answers section for Q4 - Parallel.For">
+      <change beforePath="$PROJECT_DIR$/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Program.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -24,6 +26,12 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "sikatikenmogne"
+  }
+}]]></component>
   <component name="GitToolBoxStore">
     <option name="projectConfigVersion" value="5" />
     <option name="recentBranches">
@@ -33,6 +41,10 @@
             <RecentBranchesForRepo>
               <option name="branches">
                 <list>
+                  <RecentBranch>
+                    <option name="branchName" value="5-parallel-foreach" />
+                    <option name="lastUsedInstant" value="1715198061" />
+                  </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="answers" />
                     <option name="lastUsedInstant" value="1715122644" />
@@ -88,7 +100,7 @@
   "keyToString": {
     ".NET Project.TPL-csharp-workshop.executor": "Debug",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "answers",
+    "git-widget-placeholder": "5-parallel-foreach",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -190,7 +202,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715124646561</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Update README.md&#10;Set answers section for Q4 - Parallel.For">
+      <option name="closed" value="true" />
+      <created>1715197889437</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1715197889437</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -217,6 +237,26 @@
     <MESSAGE value="Update README.md&#10;Set the related answer commit link" />
     <MESSAGE value="Set the related answer of Q3(code translation) commit link" />
     <MESSAGE value="Update README.md layout" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update README.md layout" />
+    <MESSAGE value="Update README.md&#10;Set answers section for Q4 - Parallel.For" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update README.md&#10;Set answers section for Q4 - Parallel.For" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Program.cs</url>
+          <line>30</line>
+          <properties documentPath="C:\Users\Windows\source\repos\TPL-csharp-workshop\Program.cs" containingFunctionPresentation="Lambda expression inside Method 'Main'">
+            <startOffsets>
+              <option value="823" />
+            </startOffsets>
+            <endOffsets>
+              <option value="871" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="53" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
