@@ -1,81 +1,52 @@
 ﻿﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace test
 {
     class Program
     {
-        delegate void DELG();
-        delegate void EVT(object o);
-        static event EVT evt;
-        static int loop;
-        static object LOCK;
-        static void Main(string[] args)
+
+        // Demonstrated features:
+        // 		Parallel.Invoke()
+        // Expected results:
+        // 		The threads on which each task gets executed may be different.
+        //		The thread assignments may be different in different executions.
+        //		The tasks may get executed in any order.
+        // Documentation:
+        //		http://msdn.microsoft.com/library/dd783942(VS.100).aspx
+        static void Main()
         {
-            DELG dlG_time = new DELG(time);
-            DELG dlg_multiCast;
-            IAsyncResult asyncR;
-            LOCK = new object();
-            loop = 0;
-            evt += new EVT(state_display);
-            var an_type = new {msg_pext = "pextension",msg_noext="noextension"};
-            System.Threading.Thread thd_timeInvok = 
-                new System.Threading.Thread(new System.Threading.ThreadStart(dlG_time.Invoke));
-            System.Threading.Thread thd_paraExt =
-                new System.Threading.Thread(
-                    new System.Threading.ThreadStart(() =>
-                    {
-                        System.Threading.Tasks.Parallel.For(0, 10, i =>
-                        {
-                            Console.WriteLine(@"{0}",an_type.msg_pext);
-                            System.Threading.Thread.Sleep(1000);
-                        });
-                        evt((object)an_type.msg_pext);
-                    }));
-            System.Threading.Thread thd_noParaExt = 
-                new System.Threading.Thread(
-                    new System.Threading.ThreadStart(()=>
-                    {
-                        for (int i = 0; i < 10; i++)
-                        {
-                            Console.WriteLine(@"{0}",an_type.msg_noext);
-                            System.Threading.Thread.Sleep(1000);
-                        };
-                        evt((object)an_type.msg_noext);
-                    }));
-            asyncR = dlG_time.BeginInvoke((async) =>
-                {
-                    DELG d = (DELG)((System.Runtime.Remoting.Messaging.AsyncResult)async).AsyncDelegate;
-                    d.EndInvoke(async);
-                    Console.Write("Fin des traveaux");
-                }, dlG_time);
-            dlg_multiCast = thd_paraExt.Start;
-            dlg_multiCast += thd_noParaExt.Start;
-            dlg_multiCast.Invoke();
-            while (!asyncR.IsCompleted) { Console.WriteLine("Travaux en cours..."); System.Threading.Thread.Sleep(5000); }
-            Console.Read();
-        }
-        static void time()
-        {
-            long t = 0;
-            lock (LOCK)
+            try
             {
-                while (loop < 2)
-                {
-                    Console.WriteLine(t.ToString());
-                    t += 1;
-                    System.Threading.Thread.Sleep(1000);
-                }
-            }  
+                Parallel.Invoke(
+                    BasicAction,	// Param #0 - static method
+                    () =>			// Param #1 - lambda expression
+                    {
+                        Console.WriteLine("Method=beta, Thread={0}", Thread.CurrentThread.ManagedThreadId);
+                    },
+                    delegate()		// Param #2 - in-line delegate
+                    {
+                        Console.WriteLine("Method=gamma, Thread={0}", Thread.CurrentThread.ManagedThreadId);
+                    }
+                );
+            }
+            // No exception is expected in this example, but if one is still thrown from a task,
+            // it will be wrapped in AggregateException and propagated to the main thread.
+            catch (AggregateException e)
+            {
+                Console.WriteLine("An action has thrown an exception. THIS WAS UNEXPECTED.\n{0}", e.InnerException.ToString());
+            }
         }
-        static void state_display(object o)
+
+        static void BasicAction()
         {
-            Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine("{0} STOP", (string)o);
-            Console.ForegroundColor = ConsoleColor.Gray;
-            System.Threading.Interlocked.Increment(ref loop);
+            Console.WriteLine("Method=alpha, Thread={0}", Thread.CurrentThread.ManagedThreadId);
         }
     }
+    
 }
