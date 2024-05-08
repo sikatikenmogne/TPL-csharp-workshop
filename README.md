@@ -41,7 +41,7 @@ Understand the philosophy of the provided code. What is it trying to achieve and
 Translate the provided code line by line. Understand what each line of code does and how it contributes to the overall functionality of the program.
 
 #### Answer:
-- **[✍️ related code](https://github.com/sikatikenmogne/TPL-csharp-workshop/commit/745385944a1d6d6db7a35e16835cb0e7833d73d1?diff=unified&w=1)**
+- **[✍️ related code](https://github.com/sikatikenmogne/TPL-csharp-workshop/blob/3-code-translation/Program.cs)**
 
 ---
 
