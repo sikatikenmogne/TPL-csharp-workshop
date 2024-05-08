@@ -10,15 +10,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5bceb090-efd2-4aae-b0ec-2f56a518ec4a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.TPL-csharp-workshop/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TPL-csharp-workshop/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="5bceb090-efd2-4aae-b0ec-2f56a518ec4a" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="3-code-translation" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitToolBoxStore">
@@ -31,12 +34,20 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
-                    <option name="branchName" value="main" />
-                    <option name="lastUsedInstant" value="1715070832" />
+                    <option name="branchName" value="answers" />
+                    <option name="lastUsedInstant" value="1715122644" />
                   </RecentBranch>
                   <RecentBranch>
-                    <option name="branchName" value="master" />
-                    <option name="lastUsedInstant" value="1715070831" />
+                    <option name="branchName" value="3-code-translation" />
+                    <option name="lastUsedInstant" value="1715121560" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="2-code-philosophy" />
+                    <option name="lastUsedInstant" value="1715121320" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="main" />
+                    <option name="lastUsedInstant" value="1715121218" />
                   </RecentBranch>
                 </list>
               </option>
@@ -59,6 +70,7 @@
     <setting file="file://$USER_HOME$/RiderProjects/TPL-csharp-workshop/Program.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/RiderProjects/TPL-csharp-workshop/ProgramOld.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock://C:/Users/Windows/source/repos/TPL-csharp-workshop/Program.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Windows/source/repos/TPL-csharp-workshop/Program.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
@@ -76,7 +88,7 @@
   "keyToString": {
     ".NET Project.TPL-csharp-workshop.executor": "Debug",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "answers",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -122,6 +134,63 @@
       <updated>1715070520729</updated>
       <workItem from="1715070521734" duration="332000" />
     </task>
+    <task id="LOCAL-00001" summary="Update README.md">
+      <option name="closed" value="true" />
+      <created>1715119079764</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1715119079764</updated>
+    </task>
+    <task id="LOCAL-00002" summary="enable hot reload mode">
+      <option name="closed" value="true" />
+      <created>1715119211905</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1715119211905</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Set answer Q3 — Code Translation&#10;defining comment in each line on the codebase to describes clearly how it's work">
+      <option name="closed" value="true" />
+      <created>1715122029649</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1715122029649</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Update README.md&#10;Set the related answer commit link">
+      <option name="closed" value="true" />
+      <created>1715123232123</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1715123232123</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Set the related answer of Q3(code translation) commit link">
+      <option name="closed" value="true" />
+      <created>1715123888327</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1715123888327</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Update README.md layout">
+      <option name="closed" value="true" />
+      <created>1715124478070</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1715124478070</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Update README.md layout">
+      <option name="closed" value="true" />
+      <created>1715124646561</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1715124646561</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -142,63 +211,12 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Program.cs</url>
-          <line>67</line>
-          <properties documentPath="C:\Users\Windows\source\repos\TPL-csharp-workshop\Program.cs" containingFunctionPresentation="Method 'time'">
-            <startOffsets>
-              <option value="2606" />
-            </startOffsets>
-            <endOffsets>
-              <option value="2613" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="49" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Program.cs</url>
-          <line>66</line>
-          <properties documentPath="C:\Users\Windows\source\repos\TPL-csharp-workshop\Program.cs" containingFunctionPresentation="Method 'time'">
-            <startOffsets>
-              <option value="2553" />
-            </startOffsets>
-            <endOffsets>
-              <option value="2585" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="50" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Program.cs</url>
-          <line>64</line>
-          <properties documentPath="C:\Users\Windows\source\repos\TPL-csharp-workshop\Program.cs" containingFunctionPresentation="Method 'time'">
-            <startOffsets>
-              <option value="2498" />
-            </startOffsets>
-            <endOffsets>
-              <option value="2514" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="51" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Program.cs</url>
-          <line>65</line>
-          <properties documentPath="C:\Users\Windows\source\repos\TPL-csharp-workshop\Program.cs" containingFunctionPresentation="Method 'time'">
-            <startOffsets>
-              <option value="2531" />
-            </startOffsets>
-            <endOffsets>
-              <option value="2532" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="52" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Update README.md" />
+    <MESSAGE value="enable hot reload mode" />
+    <MESSAGE value="Set answer Q3 — Code Translation&#10;defining comment in each line on the codebase to describes clearly how it's work" />
+    <MESSAGE value="Update README.md&#10;Set the related answer commit link" />
+    <MESSAGE value="Set the related answer of Q3(code translation) commit link" />
+    <MESSAGE value="Update README.md layout" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update README.md layout" />
   </component>
 </project>
