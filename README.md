@@ -79,6 +79,15 @@ regular foreach loop and Parallel.ForEach, and compares the time taken for each 
 
 Write a simple program that demonstrates the use of `Parallel.Invoke`. This construct is used to execute multiple methods in parallel.
 
+#### Answer:
+- **[✍️ related commit](https://github.com/sikatikenmogne/TPL-csharp-workshop/blob/6-parallel-invoke/Program.cs)**
+
+```text
+In this code, Parallel.Invoke is used to execute three methods in parallel: BasicAction, 
+a lambda expression, and an inline delegate. Each method prints a message to the console 
+along with the ID of the thread it's running on
+```
+
 ---
 
 ### Q7 — Task.Factory
