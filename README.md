@@ -49,6 +49,15 @@ Translate the provided code line by line. Understand what each line of code does
 
 Write a simple program that demonstrates the use of `Parallel.For`. This construct is used to execute a `for` loop in parallel, which can significantly improve performance for CPU-bound tasks.
 
+#### Answer:
+- **[✍️ related commit](https://github.com/sikatikenmogne/TPL-csharp-workshop/commit/fbaf0b4efe1f2f170e37a0b46c6d26ed8560a2f4?diff=split&w=1)**
+
+```text
+In this code, Parallel.For is used to execute a for loop in parallel. The loop runs from 0 to 9, and for each iteration,
+it calculates the square of the current number and prints it. The order of the output may vary because the iterations 
+are running in parallel.
+```
+
 ---
 
 ### Q5 — Parallel.ForEach
